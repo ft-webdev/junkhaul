@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { HardHat, Home, Layers, Truck } from "lucide-react";
 import { CtaButton } from "@/components/cta-button";
 import { Footer } from "@/components/footer";
@@ -57,100 +58,28 @@ export default function HomePage() {
     <>
       <Header />
       <main className="flex-1">
-        {/* Hero */}
-        <section className="relative isolate min-h-[calc(100svh-4.25rem)] overflow-hidden border-b border-border">
-          <div
-            className="pointer-events-none absolute inset-0 bg-[linear-gradient(105deg,#0A0A0A_0%,#171717_42%,#1F2A2E_100%)]"
-            aria-hidden
-          />
-          <div
-            className="pointer-events-none absolute inset-0 opacity-[0.35] [background-image:linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] [background-size:56px_56px]"
-            aria-hidden
-          />
-          <div
-            className="pointer-events-none absolute -right-24 top-1/2 h-[120%] w-[58%] -translate-y-1/2 bg-[radial-gradient(ellipse_at_center,rgba(0,188,212,0.28),transparent_62%)]"
-            aria-hidden
-          />
-          <div
-            className="pointer-events-none absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-black/40 to-transparent"
-            aria-hidden
-          />
-
-          {/* Trailer silhouette as dominant visual plane */}
-          <div
-            className="pointer-events-none absolute inset-y-0 right-0 hidden w-[52%] lg:block"
-            aria-hidden
-          >
-            <svg
-              viewBox="0 0 640 720"
-              className="absolute inset-0 h-full w-full animate-soft-rise opacity-90"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                x="90"
-                y="250"
-                width="420"
-                height="210"
-                rx="18"
-                fill="rgba(255,255,255,0.06)"
-                stroke="rgba(255,255,255,0.28)"
-                strokeWidth="2"
-              />
-              <rect
-                x="118"
-                y="278"
-                width="364"
-                height="154"
-                rx="8"
-                fill="rgba(0,188,212,0.08)"
-                stroke="rgba(0,188,212,0.35)"
-                strokeWidth="1.5"
-              />
-              <path
-                d="M90 460h420"
-                stroke="rgba(255,255,255,0.2)"
-                strokeWidth="2"
-              />
-              <circle
-                cx="170"
-                cy="500"
-                r="42"
-                fill="rgba(10,10,10,0.55)"
-                stroke="rgba(255,255,255,0.35)"
-                strokeWidth="3"
-              />
-              <circle
-                cx="250"
-                cy="500"
-                r="42"
-                fill="rgba(10,10,10,0.55)"
-                stroke="rgba(255,255,255,0.35)"
-                strokeWidth="3"
-              />
-              <circle cx="170" cy="500" r="16" fill="rgba(233,30,99,0.85)" />
-              <circle cx="250" cy="500" r="16" fill="rgba(233,30,99,0.85)" />
-              <path
-                d="M510 320h48l42 54v86h-90V320Z"
-                fill="rgba(255,255,255,0.08)"
-                stroke="rgba(255,255,255,0.28)"
-                strokeWidth="2"
-              />
-              <text
-                x="140"
-                y="220"
-                fill="rgba(255,255,255,0.55)"
-                fontSize="22"
-                fontFamily="ui-sans-serif, system-ui, sans-serif"
-                fontWeight="700"
-                letterSpacing="4"
-              >
-                60&quot; × 10&apos; × 3&apos; · 5.5 CU YD
-              </text>
-            </svg>
+        {/* Hero — full-bleed photo */}
+        <section className="relative isolate min-h-[calc(100svh-4.25rem)] overflow-hidden">
+          <div className="absolute inset-0">
+            <Image
+              src="/hero-junk-removal.jpg"
+              alt="ITZA Solutions tandem trailer loaded with residential junk on a clean driveway"
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover object-[68%_center] animate-hero-zoom sm:object-center"
+            />
+            <div
+              className="absolute inset-0 bg-[linear-gradient(105deg,rgba(10,10,10,0.88)_0%,rgba(10,10,10,0.72)_38%,rgba(10,10,10,0.35)_62%,rgba(10,10,10,0.22)_100%)]"
+              aria-hidden
+            />
+            <div
+              className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/25"
+              aria-hidden
+            />
           </div>
 
-          <div className="relative mx-auto flex min-h-[calc(100svh-4.25rem)] max-w-6xl flex-col justify-center px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+          <div className="relative mx-auto flex min-h-[calc(100svh-4.25rem)] max-w-6xl flex-col justify-end px-4 pb-16 pt-24 sm:justify-center sm:px-6 sm:pb-20 sm:pt-20 lg:px-8">
             <div className="animate-fade-up max-w-2xl">
               <p className="mb-5 text-sm font-black uppercase tracking-[0.28em] text-white">
                 {site.shortName}
@@ -158,13 +87,19 @@ export default function HomePage() {
               <h1 className="text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-[3.6rem] lg:leading-[1.05]">
                 Junk Removal That Doesn’t Scratch Your Driveway.
               </h1>
-              <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/72 sm:text-xl">
+              <p
+                className="mt-5 max-w-xl text-lg leading-relaxed text-white/80 sm:text-xl animate-fade-up"
+                style={{ animationDelay: "120ms" }}
+              >
                 Highly maneuverable {site.trailer.dimensions} (
                 {site.trailer.capacity}) tandem axle trailer — fits tight
                 driveways without cracking concrete. Residential cleanouts and
                 contractor drop-offs across {site.serviceAreas}.
               </p>
-              <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <div
+                className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center animate-fade-up"
+                style={{ animationDelay: "220ms" }}
+              >
                 <CtaButton href="/quote" className="w-full sm:w-auto">
                   Get a Free Quote
                 </CtaButton>
@@ -175,7 +110,10 @@ export default function HomePage() {
                   Call {site.phone}
                 </a>
               </div>
-              <p className="mt-7 text-sm font-medium tracking-wide text-white/55">
+              <p
+                className="mt-7 text-sm font-medium tracking-wide text-white/60 animate-fade-up"
+                style={{ animationDelay: "320ms" }}
+              >
                 Driveway-safe · Same-day available · Transparent pricing
               </p>
             </div>
@@ -201,7 +139,7 @@ export default function HomePage() {
                 return (
                   <article
                     key={service.title}
-                    className="group rounded-xl border border-border bg-background p-6 transition-colors hover:border-foreground/20 sm:p-7"
+                    className="service-card group rounded-xl border border-border bg-background p-6 transition-colors hover:border-foreground/20 sm:p-7"
                   >
                     <div className="mb-5 inline-flex size-12 items-center justify-center rounded-lg bg-white text-teal ring-1 ring-border transition-colors group-hover:text-accent">
                       <Icon className="size-5" aria-hidden />
