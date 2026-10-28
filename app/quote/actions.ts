@@ -144,7 +144,7 @@ export async function submitQuote(
 
     // Best-effort confirmation to the customer — don't fail the lead if this errors
     try {
-      await resend.emails.send({
+      const confirmationResult = await resend.emails.send({
         from: `ITZA Solutions <${fromEmail}>`,
         to: [data.email],
         subject: "We received your quote request — ITZA Solutions",
@@ -157,6 +157,13 @@ export async function submitQuote(
           </div>
         `,
       });
+
+      if (confirmationResult.error) {
+        console.error(
+          "Customer confirmation email failed:",
+          confirmationResult.error,
+        );
+      }
     } catch (confirmationError) {
       console.error("Customer confirmation email failed:", confirmationError);
     }
