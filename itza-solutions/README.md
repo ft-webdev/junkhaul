@@ -42,10 +42,11 @@ Without these variables, the quote form still validates and shows a graceful err
 
 ## Deploy on Vercel
 
-1. Push this folder to a Git repository.
+1. Push this repo to Git.
 2. Import the project in Vercel (framework preset: Next.js).
-3. Add the environment variables above.
-4. Deploy.
+3. Set **Root Directory** to `itza-solutions` if the app lives in that subdirectory.
+4. Add the environment variables above.
+5. Deploy.
 
 ## Notes
 
