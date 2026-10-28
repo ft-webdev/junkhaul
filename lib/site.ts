@@ -1,8 +1,8 @@
 export const site = {
   name: "ITZA Solutions LLC",
   shortName: "ITZA Solutions",
-  phone: "(469) 555-4892",
-  phoneHref: "tel:+14695554892",
+  phone: "(469) 324-9367",
+  phoneHref: "tel:+14693249367",
   email: "hello@itzasolutions.com",
   emailHref: "mailto:hello@itzasolutions.com",
   serviceAreas: "Dallas · Collin County · Rockwall",

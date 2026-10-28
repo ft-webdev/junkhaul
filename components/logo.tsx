@@ -4,9 +4,20 @@ import Link from "next/link";
 type LogoProps = {
   className?: string;
   priority?: boolean;
+  /** Use color mark on dark backgrounds; black mark on light ones. */
+  variant?: "black" | "color";
 };
 
-export function Logo({ className = "", priority = false }: LogoProps) {
+export function Logo({
+  className = "",
+  priority = false,
+  variant = "black",
+}: LogoProps) {
+  const src =
+    variant === "color"
+      ? "/logo-color.png"
+      : "/logo-black.png";
+
   return (
     <Link
       href="/"
@@ -14,10 +25,10 @@ export function Logo({ className = "", priority = false }: LogoProps) {
       aria-label="ITZA Solutions LLC home"
     >
       <Image
-        src="/Itza-Solutions-black-logo.png"
+        src={src}
         alt="ITZA Solutions LLC"
-        width={220}
-        height={48}
+        width={185}
+        height={96}
         priority={priority}
         className="h-10 w-auto sm:h-12"
       />
