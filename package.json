@@ -5,24 +5,25 @@
   "scripts": {
     "dev": "next dev --port 43123",
     "build": "next build",
-    "start": "next start --port 43123",
+    "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
     "lucide-react": "^1.62.0",
-    "next": "16.4.3",
-    "react": "19.3.0",
-    "react-dom": "19.3.0",
+    "next": "^15.5.28",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
     "resend": "^6.35.0",
     "zod": "^4.6.7"
   },
   "devDependencies": {
-    "@tailwindcss/turbopack": "^4",
+    "@eslint/eslintrc": "^3.3.7",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "16.4.3",
+    "eslint-config-next": "^15.5.28",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
