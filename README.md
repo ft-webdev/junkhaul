@@ -12,10 +12,9 @@ Built with Next.js App Router, Tailwind CSS, Lucide icons, and Resend for lead e
 ## Local development
 
 ```bash
-cd itza-solutions
 cp .env.example .env.local
 npm install
-npm run dev -- --port 43123
+npm run dev
 ```
 
 Open [http://127.0.0.1:43123](http://127.0.0.1:43123).
@@ -42,11 +41,9 @@ Without these variables, the quote form still validates and shows a graceful err
 
 ## Deploy on Vercel
 
-1. Push this repo to Git.
-2. Import the project in Vercel (framework preset: Next.js).
-3. Set **Root Directory** to `itza-solutions` if the app lives in that subdirectory.
-4. Add the environment variables above.
-5. Deploy.
+1. Import this repo in Vercel (framework preset: Next.js).
+2. Add the environment variables above.
+3. Deploy.
 
 ## Notes
 
