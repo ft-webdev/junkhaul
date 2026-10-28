@@ -73,27 +73,21 @@ export default function HomePage() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-black/15" />
           </div>
 
-          <div className="relative mx-auto flex min-h-[calc(100svh-4.25rem)] max-w-6xl flex-col justify-center px-4 py-16 sm:px-6 lg:px-8">
-            <div className="animate-fade-up max-w-xl lg:max-w-2xl">
-              <p className="mb-4 text-sm font-black uppercase tracking-[0.28em] text-white drop-shadow-sm">
+          <div className="relative mx-auto flex min-h-[calc(100svh-4.25rem)] max-w-6xl flex-col justify-end px-4 pb-14 pt-28 sm:justify-center sm:px-6 sm:pb-16 sm:pt-20 lg:px-8">
+            <div className="max-w-xl lg:max-w-2xl">
+              <p className="mb-3 text-sm font-black uppercase tracking-[0.28em] text-white drop-shadow-sm animate-fade-up">
                 {site.shortName}
               </p>
-              <h1 className="text-[2.35rem] font-black leading-[1.05] tracking-tight text-white drop-shadow-sm sm:text-5xl lg:text-[3.25rem]">
+              <h1 className="text-[2.15rem] font-black leading-[1.06] tracking-tight text-white drop-shadow-sm animate-fade-up sm:text-[2.75rem] lg:text-[3.1rem]">
                 Junk Removal That Doesn’t Scratch Your Driveway.
               </h1>
-              <p
-                className="mt-4 max-w-xl text-base leading-relaxed text-white/85 sm:text-lg animate-fade-up"
-                style={{ animationDelay: "120ms" }}
-              >
+              <p className="mt-3 max-w-lg text-[0.95rem] leading-relaxed text-white/85 animate-fade-up sm:text-base md:text-lg">
                 Highly maneuverable {site.trailer.dimensions} (
                 {site.trailer.capacity}) tandem axle trailer — fits tight
                 driveways without cracking concrete. Residential cleanouts and
                 contractor drop-offs across {site.serviceAreas}.
               </p>
-              <div
-                className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center animate-fade-up"
-                style={{ animationDelay: "220ms" }}
-              >
+              <div className="mt-6 flex flex-col gap-3 sm:mt-7 sm:flex-row sm:items-center">
                 <CtaButton href="/quote" className="w-full sm:w-auto">
                   Get a Free Quote
                 </CtaButton>
@@ -104,10 +98,7 @@ export default function HomePage() {
                   Call {site.phone}
                 </a>
               </div>
-              <p
-                className="mt-6 text-sm font-medium tracking-wide text-white/70 animate-fade-up"
-                style={{ animationDelay: "320ms" }}
-              >
+              <p className="mt-5 text-sm font-medium tracking-wide text-white/70">
                 Driveway-safe · Same-day available · Transparent pricing
               </p>
             </div>
