@@ -79,16 +79,16 @@ export default function HomePage() {
             />
           </div>
 
-          <div className="relative mx-auto flex min-h-[calc(100svh-4.25rem)] max-w-6xl flex-col justify-end px-4 pb-16 pt-24 sm:justify-center sm:px-6 sm:pb-20 sm:pt-20 lg:px-8">
+          <div className="relative mx-auto flex min-h-[calc(100svh-4.25rem)] max-w-6xl flex-col justify-center px-4 py-14 sm:px-6 sm:py-16 lg:px-8">
             <div className="animate-fade-up max-w-2xl">
-              <p className="mb-5 text-sm font-black uppercase tracking-[0.28em] text-white">
+              <p className="mb-4 text-sm font-black uppercase tracking-[0.28em] text-white">
                 {site.shortName}
               </p>
-              <h1 className="text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-[3.6rem] lg:leading-[1.05]">
+              <h1 className="text-[2.35rem] font-black leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-[3.35rem]">
                 Junk Removal That Doesn’t Scratch Your Driveway.
               </h1>
               <p
-                className="mt-5 max-w-xl text-lg leading-relaxed text-white/80 sm:text-xl animate-fade-up"
+                className="mt-4 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg animate-fade-up"
                 style={{ animationDelay: "120ms" }}
               >
                 Highly maneuverable {site.trailer.dimensions} (
@@ -97,7 +97,7 @@ export default function HomePage() {
                 contractor drop-offs across {site.serviceAreas}.
               </p>
               <div
-                className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center animate-fade-up"
+                className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center animate-fade-up"
                 style={{ animationDelay: "220ms" }}
               >
                 <CtaButton href="/quote" className="w-full sm:w-auto">
