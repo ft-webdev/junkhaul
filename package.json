@@ -4,9 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev --port 43123",
-    "build": "next build",
+    "build": "NEXT_TELEMETRY_DISABLED=1 next build",
     "start": "next start",
     "lint": "eslint"
+  },
+  "engines": {
+    "node": "20.x"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.3.3",
