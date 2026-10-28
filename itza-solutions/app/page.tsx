@@ -59,36 +59,30 @@ export default function HomePage() {
       <Header />
       <main className="flex-1">
         {/* Hero — full-bleed photo */}
-        <section className="relative isolate min-h-[calc(100svh-4.25rem)] overflow-hidden">
-          <div className="absolute inset-0">
+        <section className="relative isolate min-h-[calc(100svh-4.25rem)]">
+          <div className="absolute inset-0 overflow-hidden" aria-hidden>
             <Image
               src="/hero-junk-removal.jpg"
-              alt="ITZA Solutions tandem trailer loaded with residential junk on a clean driveway"
+              alt=""
               fill
               priority
               sizes="100vw"
-              className="object-cover object-[68%_center] animate-hero-zoom sm:object-center"
+              className="object-cover object-[72%_center] animate-hero-zoom sm:object-[60%_center]"
             />
-            <div
-              className="absolute inset-0 bg-[linear-gradient(105deg,rgba(10,10,10,0.88)_0%,rgba(10,10,10,0.72)_38%,rgba(10,10,10,0.35)_62%,rgba(10,10,10,0.22)_100%)]"
-              aria-hidden
-            />
-            <div
-              className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/25"
-              aria-hidden
-            />
+            <div className="absolute inset-0 bg-[linear-gradient(100deg,rgba(10,10,10,0.78)_0%,rgba(10,10,10,0.55)_42%,rgba(10,10,10,0.22)_70%,rgba(10,10,10,0.12)_100%)]" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-black/15" />
           </div>
 
-          <div className="relative mx-auto flex min-h-[calc(100svh-4.25rem)] max-w-6xl flex-col justify-center px-4 py-14 sm:px-6 sm:py-16 lg:px-8">
-            <div className="animate-fade-up max-w-2xl">
-              <p className="mb-4 text-sm font-black uppercase tracking-[0.28em] text-white">
+          <div className="relative mx-auto flex min-h-[calc(100svh-4.25rem)] max-w-6xl flex-col justify-center px-4 py-16 sm:px-6 lg:px-8">
+            <div className="animate-fade-up max-w-xl lg:max-w-2xl">
+              <p className="mb-4 text-sm font-black uppercase tracking-[0.28em] text-white drop-shadow-sm">
                 {site.shortName}
               </p>
-              <h1 className="text-[2.35rem] font-black leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-[3.35rem]">
+              <h1 className="text-[2.35rem] font-black leading-[1.05] tracking-tight text-white drop-shadow-sm sm:text-5xl lg:text-[3.25rem]">
                 Junk Removal That Doesn’t Scratch Your Driveway.
               </h1>
               <p
-                className="mt-4 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg animate-fade-up"
+                className="mt-4 max-w-xl text-base leading-relaxed text-white/85 sm:text-lg animate-fade-up"
                 style={{ animationDelay: "120ms" }}
               >
                 Highly maneuverable {site.trailer.dimensions} (
@@ -97,7 +91,7 @@ export default function HomePage() {
                 contractor drop-offs across {site.serviceAreas}.
               </p>
               <div
-                className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center animate-fade-up"
+                className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center animate-fade-up"
                 style={{ animationDelay: "220ms" }}
               >
                 <CtaButton href="/quote" className="w-full sm:w-auto">
@@ -105,19 +99,22 @@ export default function HomePage() {
                 </CtaButton>
                 <a
                   href={site.phoneHref}
-                  className="inline-flex min-h-12 items-center justify-center rounded-md px-4 text-base font-semibold text-white/90 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-dark"
+                  className="inline-flex min-h-12 items-center justify-center rounded-md px-4 text-base font-semibold text-white transition-colors hover:text-white/85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-dark"
                 >
                   Call {site.phone}
                 </a>
               </div>
               <p
-                className="mt-7 text-sm font-medium tracking-wide text-white/60 animate-fade-up"
+                className="mt-6 text-sm font-medium tracking-wide text-white/70 animate-fade-up"
                 style={{ animationDelay: "320ms" }}
               >
                 Driveway-safe · Same-day available · Transparent pricing
               </p>
             </div>
           </div>
+          <span className="sr-only">
+            Pickup truck and tandem junk trailer on a residential driveway
+          </span>
         </section>
 
         {/* Services */}
